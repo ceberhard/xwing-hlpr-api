@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\modules\modules.csproj" />
+    <ProjectReference Include="..\common\common.csproj" />
   </ItemGroup>
 
 </Project>

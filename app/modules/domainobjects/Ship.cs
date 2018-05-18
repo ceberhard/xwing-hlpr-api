@@ -7,6 +7,7 @@ namespace modules.domainobjects
     [Table("ship")]
     public class Ship
     {
+        [Key]
         [Column("ship_id")]
         [Required]
         public int Id { get; set; }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using common.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using modules.domainobjects;
 using modules.rules;
@@ -13,9 +14,9 @@ namespace webapi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<Ship> Get()
+        public IEnumerable<FactionShipDTO> Get()
         {
-            return new ShipService().get_ships();
+            return new ShipService().GetFactionShips();
         }
     }
 }

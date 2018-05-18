@@ -4,6 +4,10 @@ $ddlpath = "'" + $PSScriptRoot + "\..\database\DDL.sql'"
 $dmlpath = "'" + $PSScriptRoot + "\..\database\DML.sql'"
 $testdatapath = "'" + $PSScriptRoot + "\..\database\TestData.sql'"
 
+if (Test-Path $dbpath) {
+    Remove-Item $dbpath
+}
+
 $ddlcmd = "sqlite3 " + $dbpath + " "".read " + $ddlpath + """"
 Invoke-Expression $ddlcmd
 
