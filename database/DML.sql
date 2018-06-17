@@ -1,7 +1,9 @@
 INSERT INTO faction (name) VALUES 
 ('Rebel'),
 ('Imperial'),
-('Scum');
+('Scum'),
+('Resistance'),
+('First Order');
 
 INSERT INTO ship (name) VALUES
 ('T-65 X-Wing'),
@@ -57,4 +59,6 @@ INSERT INTO game_event (name, game_order) VALUES
 ('during_end_phase', 18),
 ('after_end_phase', 19);
 
-
+INSERT INTO upgrade_type (name) VALUES
+('Pilot'),
+('Add-On');

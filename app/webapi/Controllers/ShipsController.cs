@@ -14,9 +14,9 @@ namespace webapi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<FactionShipDTO> Get()
+        public IEnumerable<ShipDTO> Get()
         {
-            return new ShipService().GetFactionShips();
+            return new ShipService().GetShips();
         }
     }
 }

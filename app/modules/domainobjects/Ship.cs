@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using common.DTOs;
 
 namespace modules.domainobjects
 {
@@ -16,5 +17,14 @@ namespace modules.domainobjects
         [Required]
         [StringLength(100)]
         public string Name { get; set; }
+   
+        public ShipDTO ExtractDTO()
+        {
+            return new ShipDTO
+            {
+                Id = this.Id,
+                Name = this.Name
+            };
+        }
     }
 }
