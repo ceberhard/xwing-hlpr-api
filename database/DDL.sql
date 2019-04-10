@@ -68,3 +68,9 @@ CREATE TABLE ship_list_item
     FOREIGN KEY (faction_ship_pilot_id) REFERENCES faction_ship_pilot(faction_ship_pilot_id),
     FOREIGN KEY (upgrade_id) REFERENCES upgrade(upgrade_id),
     CONSTRAINT ship_list_item_c1 UNIQUE(ship_list_id, faction_ship_pilot_id, upgrade_id));
+
+CREATE TABLE ship_list_item_upgrade
+    (ship_list_item_upgrade_id integer primary key,
+    ship_list_item_id integer not null,
+    upgrade_id integer not null,
+    FOREIGN KEY () )

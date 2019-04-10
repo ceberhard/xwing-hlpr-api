@@ -35,5 +35,17 @@ namespace modules.rules
             }
             return returnvals;
         }
+
+        public ShipListDTO GetShipList(int shiplistid)
+        {
+            ShipListDTO listdto = null;
+            using (var context = new XwingDataContext())
+            {
+                ShipList shiplist = context.ShipList
+                    .FirstOrDefault(sl => sl.Id == shiplistid);
+                listdto = shiplist.ExtractDTO();
+            }
+            return listdto;
+        }
     }
 }

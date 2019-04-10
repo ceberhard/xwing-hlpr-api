@@ -10,6 +10,7 @@ namespace modules.domainobjects
         public DbSet<FactionShipPilot> FactionShipPilot { get;set; }
         public DbSet<Pilot> Pilot { get;set; }
         public DbSet<Ship> Ship { get;set; }
+        public DbSet<ShipList> ShipList { get;set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

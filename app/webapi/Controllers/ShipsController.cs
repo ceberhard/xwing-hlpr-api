@@ -9,14 +9,21 @@ using modules.rules;
 
 namespace webapi.Controllers
 {
-    [Route("api/[controller]")]
     public class ShipsController : Controller
     {
         // GET api/values
         [HttpGet]
+        [Route("api/ships")]
         public IEnumerable<ShipDTO> Get()
         {
             return new ShipService().GetShips();
+        }
+
+        [HttpGet]
+        [Route("api/shiplist/{shiplistid}")]
+        public ShipListDTO GetList(int shiplistid)
+        {
+            return new ShipService().GetShipList(shiplistid);
         }
     }
 }
